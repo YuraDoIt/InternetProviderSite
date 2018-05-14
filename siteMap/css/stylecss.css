@@ -1,0 +1,591 @@
+/*general styles */
+body,html {
+	font-family: Arial, San-serif;
+	font-size:100%;
+	/*width: 100%;*/
+	height: 100%;
+}
+
+ul{
+	margin:0;
+	padding:0;
+}
+
+ul li{
+	list-style-type: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+p{
+	font-size:13px;
+	line-height: 1.3em;
+}
+
+header>div.container>a>img{
+	width: 150px;
+	height: 150px;
+	margin-left: 40px;
+}
+
+header>div#logo>a>img{
+	float: left;
+}
+
+.container{
+	margin: 0 auto;
+	max-width :960px;
+	/*max-width: auto;*/
+}
+
+/* Header */
+.header {
+	/*margin:50px 0;*/
+	padding: 50px 0;
+	background-color: green;
+	text-orientation: center;
+}
+
+.header h1,
+.header h2{
+	color: greenyellow;
+	text-align: center;
+}
+
+/*navigation*/
+.page-navigation{
+	background-color: #222;
+	border-color: #9d9d9d;
+	border-style: 10px solid;
+	min-height: 60px;
+}
+
+
+.page-navigation li{
+	float: left;
+	width: 125px;
+	height: 60px;
+	/*border-left: black solid 2px;
+	border-right: black solid 2px;*/
+}
+
+
+.page-navigation a{
+	display:block;
+	color: #dae7ed;
+	line-height: 4em;
+	font-weight: bold;
+	text-align: center;
+	height: 60px;
+	/*border-left: solid black 5px;*/
+}
+
+.page-navigation li a:hover{
+	color:yellowgreen;
+	background-color: black;
+}
+
+/*Fixed menu*/
+#header{
+	z-index: 999;
+}
+
+/*Submenu*/
+
+.menu>li>ul{
+	position: absolute;
+	color:white;
+}
+
+.menu>li>ul{
+	display: none;
+	width: 5px;
+}
+
+.menu>li:hover ul{
+	display: block;
+	text-decoration: underline;
+	min-width: 150px;
+}
+
+
+.menu>li:hover li{
+	display: block;
+	border: white solid 1px;
+	height: 55px;
+	padding-right: 30px;
+}
+
+.submenu> li >a{
+	font-size: 8pt;
+	padding-top: 6px;
+}
+
+.submenu> li{
+	display: block;
+	background-color: #393a3d;
+	height: 50px;	
+}
+
+.submenu li a:hover{
+	color:yellowgreen;
+	height: 50px;
+	width: 153px;
+	text-align: center;
+}
+
+/*login forn*/
+.login{
+	padding: 15px 0;
+	float: right;
+}
+
+.login input[type="submit"]{
+	padding: 5px 15px
+	border:1px solid lightgrey;
+	border-radius: 20px;
+	margin-top: -1px;
+	margin-right: 35px;
+	height: 35px;
+}
+
+/* При взаємодії з клавішею зайти змін стиль */
+.login input[type="submit"]:hover,
+button:hover  { 
+	background-color: darkgrey;
+	color:white;
+}
+
+/* Main part */
+
+.collections{
+	overflow: auto;  /*Обтікання*/
+}
+.collection-title{
+	padding-bottom: 5px;
+	border-bottom: 1px solid #777;
+	font-size: 36px;
+}
+.collection-title small{
+	color: grey;
+	font-size:70%;
+}
+.collection-item-outer{
+	display: inline-block;
+	float: left;
+	padding-left:5px;
+	padding-right: 5px;
+	width: 33.33%;
+	box-sizing: border-box;
+}
+
+.collections > div{
+	padding-left: 0;
+	padding-right: 5px;
+	width: 98%;
+	height: 570px;
+	/*margin-bottom: 50px;*/
+	/*border:black solid 1px;*/
+}
+
+.collection-item{
+	/*border:1px solid #959595;*/
+}
+.collection-item img,video{
+	width:20%;
+	height: 26%;
+	float: left;
+}
+
+.collection-text{
+	padding: 0 20px 20px 20px;
+}
+.collection-text h3{
+	color: yellowgreen;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.collection-text p{
+ 	height: 80px;
+ 	overflow: hidden; 	 
+}
+
+.collection-text button{
+	padding: 10px;
+	border: 1px solid transparent;
+	border-radius:7px;
+	/*outline: none;*/
+}
+
+
+/*mapa*/
+
+.mapa{
+	padding: 0;
+}
+
+.mapa>li>ul>li{
+	margin-left: 40px;
+	list-style: square;
+	font-size: 13pt;
+}
+
+.mapa>li{
+	list-style: circle;
+	margin-left: 220px;
+	margin-right: 40px;
+	/*margin-top: 20px;*/
+	/*margin-top: 15px;*/
+	padding-top: 15px;
+	font-family:"Trebuchet MS", "Lucida Sans";
+	padding: 7px 20px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border-left: 10px solid #f05d22; 
+	box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
+     -2px -2px 5px 0 rgba(0,0,0,.1),
+    2px 2px 5px 0 rgba(0,0,0,.1),
+    -2px 2px 5px 0 rgba(0,0,0,.1);
+	font-size: 20px;
+	letter-spacing: 2px;
+	transition: 0.3s all linear;
+}
+
+
+.mapa li:nth-child(1){margin-top:20px;}
+.mapa li:nth-child(2){border-color: #8bc63e;}
+.mapa li:nth-child(3){border-color: #fcba30;}
+.mapa li:nth-child(4){border-color: #1ccfc9;}
+.mapa li:nth-child(5){border-color: #493224;}
+.mapa li:nth-child(6){border-color: #1ccfc9;}
+.mapa li:nth-child(7){border-color: #1ccfc9;}
+.mapa li:nth-child(8){border-color: #fcba30;}
+.mapa li:nth-child(9){border-color: #8bc63e;}
+.mapa li:nth-child(10){border-color: #f05d22;}
+
+.mapa li:hover {border-left: 10px solid transparent;}
+
+.mapa li:nth-child(1):hover {border-right: 10px solid #f05d22;}
+.mapa li:nth-child(2):hover {border-right: 10px solid #8bc63e;}
+.mapa li:nth-child(3):hover {border-right: 10px solid #fcba30;}
+.mapa li:nth-child(4):hover {border-right: 10px solid #1ccfc9;}
+.mapa li:nth-child(5):hover {border-right: 10px solid #493224;}
+.mapa li:nth-child(6):hover {border-right: 10px solid #3bdb90;}
+.mapa li:nth-child(7):hover {border-right: 10px solid #1ccfc9;}
+.mapa li:nth-child(8):hover {border-right: 10px solid #fcba30;}
+.mapa li:nth-child(9):hover {border-right: 10px solid #8bc63e;}
+.mapa li:nth-child(10):hover {border-right: 10px solid #f05d22;}
+/*mapa*/
+
+
+/*Fotter */
+.fotter{
+	background-color: yellowgreen;
+	color:white;
+	padding:20px 0;
+	margin-top: 40px;
+}
+.fotter>div{
+	padding-left:auto; 
+}
+
+footer>div>nav>p{
+	width: 1200px;
+	min-height: 10px;
+	padding-right: 20px;
+	float: left;
+}
+
+footer>nav>div>ul{
+	float:right;
+	margin:0;
+	padding:4px;
+	margin-right: 30px;
+}
+
+footer>nav>div>ul>li{
+	display: inline;
+	margin-right: 10px;
+}
+
+footer>nav>div>ul>li>a{
+	color:black;
+	/*border-left: 1px solid darkslategray;*/
+	margin-left: 1px;
+
+}
+
+footer>nav>div>ul>li:nth-last-child(2n){
+	border-left: 1px solid darkslategray;
+	border-right: 1px solid darkslategray;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+
+
+
+
+/*Adaptation*/
+@media(max-width: 569px){
+	.menu>li{
+	display:none;
+	}
+
+	p{
+	font-size:10px;
+	line-height: 1.3em;
+	}
+
+	.collection-item-outer{
+	width: auto ;
+	margin-bottom: 20px;
+	}
+	.collections > div:first-child{
+	width: auto;
+	}
+	.collections > div:last-child{
+	width: auto;	
+	}
+
+
+	.collection-text button{
+	display: none;
+	}
+
+	.page-navigation{
+	min-height: 50px;
+	}
+
+	/**/
+
+	.mapa{
+	padding: 0;
+	float:right;
+	/*height: 600px;	*/
+}
+
+.mapa>li>ul>li{
+	margin-left: 20px;
+	list-style: square;
+	font-size: 13pt;
+	padding-right:40px;
+	float:right;
+}
+
+.mapa>li{
+	list-style: circle;
+	margin-left: 180px;
+	margin-right: 0px;
+	padding-right: 20px;
+	padding-top: 15px;
+	padding-left: 0px;
+	font-family:"Trebuchet MS", "Lucida Sans";
+	padding: 7px 20px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border-left: 10px solid #f05d22; 
+	box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
+     -2px -2px 5px 0 rgba(0,0,0,.1),
+    2px 2px 5px 0 rgba(0,0,0,.1),
+    -2px 2px 5px 0 rgba(0,0,0,.1);
+	font-size: 20px;
+	letter-spacing: 2px;
+	transition: 0.3s all linear;
+	width: 190px;
+
+}
+
+	.collection-item img,video{
+	width:84px;
+	height: 100px;
+	float: left;
+}
+
+.collections > div{
+	height: 600px;
+	width: 100px;
+}
+
+
+/**/
+	.menu>li:hover ul{
+	min-width: 150px;
+}
+.menu>li:hover li{
+	height: 55px;
+}
+.submenu li a:hover{
+	height: 50px;
+	width: 200px;
+}
+/**/
+
+	header>div.container>a>img{
+	/*width: 75px;
+	height: 75px;*/
+	display: none;
+	}
+	
+	footer>div.container>p{
+		padding-left: 5px;
+	}
+	
+	/*#social{
+   	display: none; 
+	}*/
+
+}	
+
+@media(min-width: 568px) and (max-width: 940px){
+	.collection-item-outer{
+	width: auto;
+	}
+	
+	.page-navigation li:first-child{
+	width: 60px;
+	}
+	.page-navigation li:last-child{
+	width: 70px;
+	}
+	.page-navigation li:nth-child(2){
+	width: 70px;
+	}
+	.page-navigation li:nth-child(5){
+	width: 110px;
+	}
+
+	.login input[type="submit"]{
+		width: 120px;
+		font-size: 8pt;	
+		margin-top: -4px;
+		margin-right: 5px;
+	}
+
+
+/**/
+	.mapa{
+	padding: 0;
+	/*height: 600px;	*/
+}
+
+.mapa>li>ul>li{
+	margin-left: 40px;
+	list-style: square;
+	font-size: 13pt;
+}
+
+.mapa>li{
+	list-style: circle;
+	margin-left: 180px;
+	margin-right: 0px;
+	/*margin-top: 20px;*/
+	/*margin-top: 15px;*/
+	padding-top: 15px;
+	font-family:"Trebuchet MS", "Lucida Sans";
+	padding: 7px 20px;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border-left: 10px solid #f05d22; 
+	box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
+     -2px -2px 5px 0 rgba(0,0,0,.1),
+    2px 2px 5px 0 rgba(0,0,0,.1),
+    -2px 2px 5px 0 rgba(0,0,0,.1);
+	font-size: 20px;
+	letter-spacing: 2px;
+	transition: 0.3s all linear;
+	width: 300px;
+}
+
+	.collection-item img,video{
+	width:150px;
+	height: 170px;
+	float: left;
+}
+
+.collections > div{
+	height: 670px;
+}
+/**/
+
+	.collections > div:first-child{
+	width: auto;
+	}
+	.collections > div:last-child{
+	width: auto;	
+	}		
+
+	a{
+	text-decoration: none;
+	font-weight: 5px;
+	font-size:13px;
+	height: auto;
+	}
+
+	ul li{
+	width: 15%;
+
+	}
+
+	.container{
+	margin: 0 auto;
+	max-width :960px;
+	}
+
+/**/
+
+	.menu>li:hover ul{
+	display: block;
+	text-decoration: underline;
+	min-width: 80px;
+}
+.menu>li:hover li{
+	display: block;
+	border: white solid 1px;
+	height: 55px;
+	padding-right: 30px;
+}
+.submenu li a:hover{
+	color:yellowgreen;
+	height: 50px;
+	width: 80px;
+	text-align: center;
+}
+/**/
+	
+
+	.page-navigation li a:hover{
+		color:yellowgreen;
+		background-color: black;
+		height: 56px;
+	}
+	
+	.page-navigation li{
+	float: left;
+	width: 14%;
+	height:auto;
+	}
+	
+	.page-navigation{
+	min-height: 57px;
+	}	
+
+
+	footer>div.container>p{
+		padding-left: 10px;
+	}
+}
+
+
+@media(min-width: 940px){
+	
+
+	footer>div.container>p{
+		padding-left: 10px;
+	}
+
+}

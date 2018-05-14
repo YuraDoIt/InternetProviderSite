@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Internet provider</title>
+    <link rel="stylesheet" type="text/css" href="css/stylecss.css">
+    <link rel="icon" type="images/x-icon" href="image/Internet.ico">
+    <script type="text/javascript" src="more.js"></script>
+
+    <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="jquery.js" type="text/javascript"></script>
+    <script src="jquery.maskedinput.js"></script>
+    <script src="ajaxform.js"></script>
+
+    <!-- <script type="text/javascript">
+        // Маска вводу номеру телефона(плагин maskedinput)
+        // $(function($) {
+        //     $('[name="phone"]').mask("+380 (999) 999-9999");
+        // })
+
+        $(document).ready(function() {
+            $('#form').submit(function() { // проверка на пустоту заполненных полей. Атрибут html5 — required не подходит (не поддерживается Safari)
+                // if (document.form.adress.value == ''
+                //|| document.form.user_sname.value == '' //|| document.form.phone.value == '' || document.form.email.value == '' || document.form.kind.value == '' || document.form.taruf.value == '' 
+                // || document.form.message.value == '' 
+                // ) {
+                //     valid = false;
+                //     return valid;
+                // }
+                $.ajax({
+                    type: "POST",
+                    url: "mail.php",
+                    data: $(this).serialize()
+                }).done(function() {
+                    $('.js-overlay-thank-you').fadeIn();
+                    $(this).find('input').val('');
+                    $('#form').trigger('reset');
+                });
+                return false;
+            });
+        });
+
+        // Закрыть попап «спасибо»
+        $(document).mouseup(function(e) { // по клику вне попапа
+            var popup = $('.popup');
+            if (e.target != popup[0] && popup.has(e.target).length === 0) {
+                $('.js-overlay-thank-you').fadeOut();
+            }
+        });
+        $('.js-close-thank-you').click(function() { // по клику на крестик
+            $('.js-overlay-thank-you').fadeOut();
+        });
+    </script> -->
+
+</head>
+
+<body>
+
+    <!--Header-->
+    <header class="header" id="head">
+        <div class="container" id="logo">
+            <a href="../Internet.html">
+                <img src="image/Internet.ico">
+            </a>
+        </div>
+
+        <div class="container">
+            <!-- <img src="Internet.ico"> -->
+            </br>
+            <h1>Львівський Інтернет провайдер</h1>
+            <h2><small>Надання інтернет послуг населенню </small></h2>
+            </br>
+
+        </div>
+    </header>
+    <!--Header-->
+
+    <!--navigation-->
+    <nav class="page-navigation" id="header">
+        <div class="container">
+            <ul class="menu">
+                <li> <a href="#">Новини</a> </li>
+                <li> <a href="#">Домашня</a> </li>
+                <li> <a href="#">Абонентам</a></li>
+                <li> <a href="#">Підключення</a>
+                    <ul class="submenu">
+                        <li><a href="#1">Заявка на підключення</a></li>
+                        <li><a href="#2">Умови підключення</a></li>
+                        <li><a href="#3">Адреси підключення</a></li>
+                    </ul>
+                </li>
+                <li> <a href="#">Тарифні плани</a> </li>
+                <li> <a href="#">Контакти</a></li>
+            </ul>
+
+            <!--login form-->
+            <form action="#" class="login">
+                <input type="submit" value="Особистий кабінет">
+            </form>
+            <!--/login form-->
+        </div>
+    </nav>
+    <!--/navigation-->
+
+    <br>
+
+    <!--Main section-->
+    <main>
+
+        <div class="container">
+            <h2 class="collection-title">Заповніть заявку для підключення<small></small></h2>
+            <div class="collections">
+                <div class="collection-item-outer">
+                    <div class="collection-item	">
+                        <div class="collection-text">
+
+                            <form class="contact_form" id="form" name="contact_form" method="post" action="#">
+
+                                <ul>
+                                    <br/>
+                                    <h2>Заявка на підключення</h2>
+                                    <span class="required_notification">* Заповніть дані поля</span>
+
+                                    <li>
+                                        <label for="adress">Адреса підключення</label>
+                                        <input type="text" name="adress" placeholder="Ваша адреса*" id="adress" required>
+                                    </li>
+
+                                    <li>
+                                        <label>Ім'я </label>
+                                        <input type="text" name="name" placeholder="Ім'я*" id="name" required>
+                                        <span class="form_hint">Введіть Ім'я </span>
+                                    </li>
+
+                                    <li>
+                                        <label>Прізвище</label>
+                                        <input type="text" name="sname" placeholder="Прізвище*" id="sname" required>
+                                        <span class="form_hint">Введіть Прізвище </span>
+                                    </li>
+
+
+                                    <li>
+                                        <label>По-батькові </label>
+                                        <input type="text" name="surname" placeholder="По-батькові*" id="surname">
+                                        <span class="form_hint">По-батькові</span>
+                                    </li>
+
+                                    <li>
+                                        <label for="phone">Контактний телефон</label>
+                                        <input type="text" name="phone" placeholder="Введіть ваш телефон" autocomplete="off" id="phone" maxlength="12" required>
+                                        <span class="form_hint">Формат вводу 380123456789</span>
+                                    </li>
+
+
+                                    <li>
+                                        <label for="email">Email:</label>
+                                        <input type="email" name="email" placeholder="john_doe@example.com" required />
+                                        <span class="form_hint">Формат вводу "name@something.com"</span>
+
+                                        <!-- <label>E-mail</label>	
+									<input type="text" name="mail" placeholder="email" autocomplete="off" id="user_mail" required>
+									<span class="form_hint">Невірно введено пошту приклад "name@something.com"</span> -->
+                                        <!-- </li>
+  -->
+                                        <li>
+                                            <label>Статус :</label> Фізична особа
+                                            <input type="radio" name="kind" value="Фізична особа">
+                                            <br/> Юридчна особа
+                                            <input type="radio" name="kind" value="Юридична особа">
+                                        </li>
+
+                                        <li>
+                                            <label>Тариф</label>
+                                            <div>
+                                                <select name="taruf" required>
+                                                    <option  disabled selected style="display: none" >Оберіть тариф</option>
+                                                    <option value="optimal">Оптимальний(40 Мбіт/c)</option>
+                                                    <option value="econom">Економний(70 Мбіт/c)</option>
+                                                    <option value="standart">Стандартний(100 Мбіт/c) - Рекомендуємо</option>
+                                                    <option value="extrim">Екстрім(130 Мбіт/c)</option>
+                                                </select>
+                                            </div>
+                                        </li>
+
+
+                                        <li>
+                                            <label for="info">Повідомлення:</label>
+                                            <textarea cols="40" rows="6" name="info" id="message" tabindex="5" placeholder="Ваше повідомлення"></textarea>
+                                        </li>
+
+                                        <button class="submit" type="submit" value="">
+                               Надіслати заявку
+                           </button>
+                                </ul>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+    <!--Main section-->
+
+
+    <!--down of page(add information)-->
+    <footer class="fotter">
+        <nav>
+            <div class="container" id="containerFotter">
+
+                <ul class="footer-navigation">
+                    <li><a href="#">Домашня</a></li>
+                    <li><a href="#">Тарифи</a> </li>
+                    <li><a href="#">Підключення</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li>
+                        <a href="siteMap/InternetMap.html">Навігація</a>
+                    </li>
+                </ul>
+
+                <p id="Copyright" style="color:white">Copyright YuraEntertainment@gmail.com ©2017</p>
+
+            </div>
+        </nav>
+    </footer>
+</body>
+
+</html>

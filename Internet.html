@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Інтернет провайдер</title>
+		<link rel="stylesheet" type="text/css" href="css/stylecss.css">
+		<link rel="icon" type="images/x-icon" href="Internet.ico">
+		<script type="text/javascript" src="more.js"></script>	
+		
+		<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+
+
+	</head>
+
+	<body>
+
+		<!--Header-->
+		<header class="header" id="head">
+			<div class = "container" id="logo">
+				<a href="Internet.html">
+					<img src="Internet.ico">
+				</a>
+			</div>
+
+			<div class="container">
+				<!-- <img src="Internet.ico"> -->
+				</br>
+				<h1>Львівський Інтернет провайдер</h1>
+				<h2><small>Надання інтернет послуг населенню </small></h2>
+				</br>
+
+			</div>
+		</header>
+		<!--Header-->
+
+		<!--navigation-->
+		<nav class="page-navigation" id="header">
+			<div class="container">
+				<ul class="menu">
+					<li> <a href="#">Новини</a> </li>
+					<li> <a href="#">Домашня</a> </li>
+					<li> <a href="#">Абонентам</a></li>
+					<li> <a href="#">Підключення</a>
+						<ul class="submenu">
+							<li><a href="apply/apply.html">Заявка на підключення</a></li>
+							<li><a href="#2">Умови підключення</a></li>
+							<li><a href="#3">Адреси підключення</a></li>
+						</ul>
+					</li>
+					<li> <a href="#">Тарифні плани</a> </li>
+					<li> <a href="#">Контакти</a></li>
+				</ul>
+
+				<!--login form-->
+				<form action="#" class="login">
+					<input type="submit" value="Особистий кабінет"> 
+				</form>					
+				<!--/login form-->
+			</div>
+		</nav>
+		<!--/navigation-->
+
+		<br>
+
+		<!--Main section-->
+		<main>	
+
+			<div class="container">
+
+				<h2 class="collection-title">Інформація про тарифи<small></small></h2>
+				<div class="collections">
+					<div class="collection-item-outer">
+						<div class="collection-item	">
+							<img src="image/Internet3.jpg" alt="List picture" width="300" height="175">
+							<div class="collection-text">
+								<h3>Екстрім тариф</h3>
+								<h4>Вартість 175 грн./міс.</h4>	
+								<p>Ви екстримальна людина, любите екстрім? Саме для вас ми приготували швидкісний пакетний тариф. За допомогою цього тарифу ви матимете можливість підключення до високошвидкісного інтернету. 
+								</p>
+								<button onclick="showText(this)">Читати більше...</button>
+							</div>
+						</div>
+		 			</div>
+
+		 			<div class="collection-item-outer">
+						<div class="collection-item">
+							<img src="image/Internet4.jpg" alt="List picture" width="300" height="">
+							<div class="collection-text">
+								<h3>Стандартний тариф </h3>
+								<h4>Вартість 110грн./міс.</h4>
+								<p>Обирайте найкращий та найоптимальніший тариф для роботи у дома чи на роботі. Даний тариф є дуже популярним. Підключемо даний тариф за оптимальну кількість днів. Підключайте даний тариф ! Всього лише за 100 грн/міс ви будете мати цілих 100 мбіт інтернету на високій швидкості.</p>
+								<button onclick="showText(this)">Читати більше...</button>
+							</div>
+						</div>
+					</div>	
+						
+					<div class="collection-item-outer">	
+						<div class="collection-item">
+								<img src="image/Internet1.jpg" alt="List picture" width="300" height="">
+								<div class="collection-text">
+									<h3> Оптимальний тариф</h3>
+									<h4>Вартість 65грн./міс.</h4>
+									<p>Даний тариф призначений для тих, хто не часто користується інтернетом. Обираючи даний тариф ви матимете змогу користуватись інтернетом на середній швидкості без проблем із підключенням. Відправляйте заявку на підключення! </p>
+									<button onclick="showText(this)">Читати більше...</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				<!--</div>-->
+
+			<!--<div class="container">-->
+				<h2 class="collection-title">Останні новини<small></small></h2>
+
+				<div class="collections">
+					<div class="collection-item-outer">
+						<div class="collection-item	">
+							<!-- <video controls >
+								<source src="video/GoPro.mp4" type="video/mp4">
+							</video > -->
+							<div class="collection-text">
+								<h3>Акція до Великодня</h3>
+								<p>Незабаром Великодні свята. Акція передбачає надання безкоштовного доступу до мережі Інтернет на один місяць, за умови оплати вартості підключення та абонентської плати за перший місяць користування, згідно обраного тарифного плану.</p>
+								<button onclick="showText(this)">Читати більше...</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="collection-item-outer">
+						<div class="collection-item	">
+							<!-- <video controls>
+								<source src="video/GoPro.mp4" type="video/mp4">
+							</vid eo>-->
+							<div class="collection-text">
+								<h3>Незабаром очікуйте новий тариф</h3>
+								<p>Незабаром очікуйте новий тариф для вашої оселі.</p>
+								<button onclick="showText(this)">Читати більше...</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="collection-item-outer">
+						   <div class="collection-item	">
+							    <!-- <video controls>
+								    <source src="video/GoPro.mp4" type="video/mp4">
+								</video> -->
+							<div class="collection-text">
+									<h3>Дякуємо що ви з нами</h3>
+									<p>Нашій компанії вже 1 рі. В честь даного свята, ми даруємо місяць безкоштовного інтерету. Запрошуйте своїх друзів та отримуйте ще місяь безкоштовного інтернету у подарунок. А також не забувайте слідкувати за останніми новинами нашої компанії.</p>
+								<button onclick="showText(this)">Читати більше...</button>
+							</div>
+						</div>
+					</div>
+				</div>		
+			</div>
+		</main>
+		<!--Main section-->
+
+		<!--down of page(add information)-->
+		<footer class="fotter">
+			<nav >
+				<div  class="container" id="containerFotter">
+
+					<ul class="footer-navigation">
+						<li><a href="#">Домашня</a></li>
+						<li><a  href="#">Тарифи</a> </li>
+						<li><a href="#">Підключення</a></li>
+						<li><a href="#">Оплата</a></li>
+						<li><a href="siteMap/InternetMap.html"">Навігація</a></li>
+					</ul>	
+
+					<p>Copyright YuraEntertainment@gmail.com ©2017</p>
+
+				</div>
+			</nav>
+		</footer>
+		<!--down of page(add information)-->
+	</body>
+
+</html>
